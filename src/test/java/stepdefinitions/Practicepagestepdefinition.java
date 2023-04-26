@@ -34,7 +34,7 @@ public class Practicepagestepdefinition {
 
 	@Given("user is on rahullshetty home page")
 	public void user_is_on_rahullshetty_home_page() {
-		System.out.println("home page");
+		System.out.print("home page");
 
 	}
 
