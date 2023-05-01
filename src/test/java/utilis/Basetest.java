@@ -11,16 +11,21 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 public class Basetest {
-	WebDriver driver;
-	public Basetest(){}
+	private static WebDriver driver;
 	
-	public WebDriver callwebdriver() throws IOException {
+	public Basetest(){}
+	public static WebDriver getDriver() {
+		return driver;
+	}
+	
+	public  static WebDriver callwebdriver() throws IOException {
 		
 		Properties prop = new Properties();
 		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\properties\\global.properties");
 		prop.load(fis);
 		String Browser=prop.getProperty("browser");
 		String qaurl=prop.getProperty("url");
+		String qaurl1=prop.getProperty("url1");
 		
 		
 		if(driver==null) {
@@ -44,9 +49,10 @@ public class Basetest {
 		System.setProperty("webdriver.safari.driver", "D:\\driver\\safaridriver.exe");
 		driver=new SafariDriver();
 			}
-			
-		driver.get(qaurl);
+			driver.get(qaurl1);
+		//driver.get(qaurl);
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+			
 		driver.manage().window().maximize();
 		}
 		return driver;

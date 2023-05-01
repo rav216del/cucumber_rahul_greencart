@@ -10,6 +10,10 @@ public class Pagemanager {
 	Practicepage practicepage;
 	Automationprojectpage automationprojectpage;
 	Greencartproductpage greencartproductpage;
+	Cartpage cartpage;
+	Placeorderpage placeorderpage;
+	Proceedpage proceedpage;
+	Thankyoushopping thankyoushopping;
 	WebDriver driver;
 	public Pagemanager(WebDriver driver){
 		
@@ -43,6 +47,25 @@ public class Pagemanager {
 		 greencartproductpage= new Greencartproductpage(driver);
 		 return greencartproductpage;
 	}
+	public Cartpage getCartpage() {
+		cartpage= new Cartpage(driver);
+		return cartpage;
+		
+	}
+	public Placeorderpage getPlaceorderpage() {
+		placeorderpage= new Placeorderpage(driver);
+		return placeorderpage;
+	}
+	public Proceedpage getProceedpage() {
+		proceedpage= new Proceedpage(driver);
+		return proceedpage;
+	}
+	
+	public Thankyoushopping getThankyoushopping() {
+		thankyoushopping = new Thankyoushopping(driver);
+		return thankyoushopping;
+	}
+	
 	
 	
 	

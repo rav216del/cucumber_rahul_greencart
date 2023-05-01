@@ -22,20 +22,31 @@ public class Hooks {
 	}
 @After
 public void teardown() throws IOException {
-	testsetup.basetest.callwebdriver().quit();
+	//testsetup.basetest.callwebdriver().quit();
 
 }
 @AfterStep
 public void addscreenshot(Scenario scenario) throws WebDriverException, IOException {
 	
-	if(scenario.isFailed()) {
+	if(scenario.isFailed())
+	{
 		
 		File source=((TakesScreenshot)testsetup.basetest.callwebdriver()).getScreenshotAs(OutputType.FILE);
+		String destination=System.getProperty("user.dir")+"\\src\\test\\java\\screenshot\\failedTest.jpeg";
+		FileUtils.copyFile(source, new File(destination));
+		
+		/*File source=((TakesScreenshot)testsetup.basetest.callwebdriver()).getScreenshotAs(OutputType.FILE);
 		byte[] filecontent=FileUtils.readFileToByteArray(source);
-		scenario.attach(filecontent, "image/png", scenario.getName());
+		scenario.attach(filecontent, "image/png", scenario.getName());*/
+	}
+	else
+	{
+		File source=((TakesScreenshot)testsetup.basetest.callwebdriver()).getScreenshotAs(OutputType.FILE);
+		String destination=System.getProperty("user.dir")+"\\src\\test\\java\\screenshot\\passedTest.jpeg";
+		FileUtils.copyFile(source, new File(destination));
 	}
 	
-	//System.out.println("test failed take screen shot");
+	
 	
 	
 }
