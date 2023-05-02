@@ -14,11 +14,11 @@ public class Basetest {
 	private static WebDriver driver;
 	
 	public Basetest(){}
-	public static WebDriver getDriver() {
+	public  WebDriver getDriver() {
 		return driver;
 	}
 	
-	public  static WebDriver callwebdriver() throws IOException {
+	public  WebDriver callwebdriver() throws IOException {
 		
 		Properties prop = new Properties();
 		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\properties\\global.properties");

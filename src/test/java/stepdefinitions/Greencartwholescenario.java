@@ -66,7 +66,7 @@ public class Greencartwholescenario {
 	public void items_present_in_greencart_page_should_be_increased() {
 		WaitUtils.explicitwait(driver, greencartproductpage.getCount_on_cart(), 5);
 		System.out.println(greencartproductpage.getcartcount());
-		if(greencartproductpage.getcartcount().contains("1")) {
+		if(greencartproductpage.getcartcount().contains("2")) {
 			Assert.assertTrue(true);
 		}
 		else
@@ -139,7 +139,7 @@ public class Greencartwholescenario {
 	public void select_country_text_is_found() {
 		System.out.println(proceedpage.getchoosecountry());
 		String chooseCountry=proceedpage.getchoosecountry();
-		if(chooseCountry.contains("Choose Country")) {
+		if(chooseCountry.contains("Choose Country1")) {
 			Assert.assertTrue(true);
 		}
 		else
@@ -164,6 +164,7 @@ public class Greencartwholescenario {
 	@Then("^order should be placed$")
 	public void order_should_be_placed() throws IOException {
 		//driver = testsetup.basetest.callwebdriver();
+		driver = testsetup.basetest.getDriver();
 		System.out.println(testsetup.basetest.callwebdriver().getTitle());
 		String title=testsetup.basetest.callwebdriver().getTitle();
 		if(title.contains("veg and fruits")) {
@@ -180,8 +181,9 @@ public class Greencartwholescenario {
 
 	@Then("thank you for shopping page is open")
 	public void thank_you_for_shopping_page_is_open() throws IOException {
-		System.out.println(testsetup.basetest.callwebdriver().getTitle());
-		String title=testsetup.basetest.callwebdriver().getTitle();
+		driver = testsetup.basetest.getDriver();
+		System.out.println(driver.getTitle());
+		String title=driver.getTitle();
 		if(title.contains("veg and fruits")) {
 			Assert.assertTrue(true);
 		}

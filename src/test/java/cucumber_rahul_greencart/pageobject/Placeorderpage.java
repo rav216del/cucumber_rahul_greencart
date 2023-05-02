@@ -38,9 +38,12 @@ WebElement promocodetextbox;
 WebElement promocodeapplybutton;
 
 @CacheLookup
-@FindBy(xpath="//span[text()='Code applied ..!']")
+@FindBy(xpath="//span[contains(text(),'Code applied ..!')]")
 WebElement codeapplied;
 
+public WebElement getCodeapplied() {
+	return codeapplied;
+}
 @CacheLookup
 @FindBy(css=".totAmt")
 WebElement totalamount;
@@ -76,7 +79,7 @@ public void getpromoCodetextbox(String promocode) {
 public void getpromocodeapplybutton() {
 	promocodeapplybutton.click();
 }
-public String getcodeapplied() {
+public String getCodeOfCoupon() {
 	return codeapplied.getText();
 }
 public String gettotalamount() {

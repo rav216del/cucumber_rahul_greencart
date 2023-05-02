@@ -3,6 +3,7 @@ package cucumber_rahul_greencart.pageobject;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -23,7 +24,7 @@ public class Cartpage {
 	WebElement cartproduct;
 	
 	@CacheLookup
-	@FindBy(xpath="//div[3]/div[2]/div[1]/div[1]/ul/li/div[1]/p[1]")
+	@FindBy(xpath="//*[@id=\"root\"]/div/header/div/div[3]/div[2]/div[1]/div[1]/ul/li/div[1]/p[1]")
 	List<WebElement> multiplecartproduct;
 	
 	
@@ -36,12 +37,14 @@ public class Cartpage {
 	WebElement proceedtocheckout;
 	
 	public List<String> getmultiplecartproduct() {
-		System.out.println(multiplecartproduct.size());
+		//System.out.println(multiplecartproduct.size());
 		List<String>a= new ArrayList<String>();
 		//String[]b;
+		//JavascriptExecutor js= ((JavascriptExecutor)driver);
+		//js.executeScript("");
 		for(int i=1;i<=multiplecartproduct.size();i++) {
-			multiplecartproduct.get(i-1).getText();
-			a.add(multiplecartproduct.get(i-1).getText());
+			String item=multiplecartproduct.get(i-1).getText().split("-")[0].trim();
+			a.add(item);
 		}
 		return a;
 	}

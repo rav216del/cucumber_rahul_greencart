@@ -1,6 +1,4 @@
 package cucumber_rahul_greencart.pageobject;
-
-import java.util.Arrays;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -85,22 +83,24 @@ public void getproductsname(String product) {
 		}
 	}
 }
-public void getmultipleitem() {
-	String []multipleitem= {"Tomato","Potato","Onion","Pomegranate","Almonds"};
+public void getmultipleitem(List<String> list) {
+	//String []multipleitem= {"Tomato","Potato","Onion","Pomegranate","Almonds","Mushroom"};
 	//System.out.println(multipleitem);
 	for(int i=1;i<=productname.size();i++) {
 		String selecteditem=productname.get(i-1).getText().split("-")[0].trim();
 		//System.out.println(selecteditem);
-		List<String> itemsinlist=Arrays.asList(multipleitem);
+		//List<String> itemsinlist=Arrays.asList(multipleitem);
 		int count=0;
-		if(itemsinlist.contains(selecteditem))
+		if(list.contains(selecteditem))
 		{
 			//,"Cashews"
 			count++;
 			//System.out.println(driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/div/div["+i+"]/h4")).getText());
 			//System.out.println(driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/div/div["+i+"]/p")).getText());
 			driver.findElement(By.xpath("//div["+i+"]/div[3]/button")).click();
-			if(count==multipleitem.length) {
+			//if(count==multipleitem.length) 
+			if(count==list.size())
+			{
 				break;
 			}
 			

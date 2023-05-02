@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-30T14:10:14 IST" name="Default suite" finished-at="2023-04-30T14:10:47 IST" duration-ms="33448">
+  <suite started-at="2023-05-02T12:17:19 IST" name="Default suite" finished-at="2023-05-02T12:17:39 IST" duration-ms="19600">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.Multipleitemtestng@20140db9]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.Multipleitemtestng@71ba6d4e]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-04-30T14:10:14 IST" name="Default test" finished-at="2023-04-30T14:10:47 IST" duration-ms="33448">
+    <test started-at="2023-05-02T12:17:19 IST" name="Default test" finished-at="2023-05-02T12:17:39 IST" duration-ms="19600">
       <class name="testrunner.Multipleitemtestng">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testrunner.Multipleitemtestng@20140db9]" started-at="2023-04-30T14:10:14 IST" name="setUpClass" finished-at="2023-04-30T14:10:16 IST" duration-ms="2089" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testrunner.Multipleitemtestng@71ba6d4e]" started-at="2023-05-02T12:17:19 IST" name="setUpClass" finished-at="2023-05-02T12:17:22 IST" duration-ms="2318" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@32e652b6]]>
+                <![CDATA[org.testng.TestRunner@2c88a3e8]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.Multipleitemtestng@20140db9]" started-at="2023-04-30T14:10:16 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-04-30T14:10:47 IST" duration-ms="30885" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.Multipleitemtestng@71ba6d4e]" started-at="2023-05-02T12:17:22 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-05-02T12:17:37 IST" duration-ms="15023" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,7 +37,38 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testrunner.Multipleitemtestng@20140db9]" started-at="2023-04-30T14:10:47 IST" name="tearDownClass" finished-at="2023-04-30T14:10:47 IST" duration-ms="312" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testrunner.Multipleitemtestng@71ba6d4e]" started-at="2023-05-02T12:17:37 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-05-02T12:17:39 IST" duration-ms="1666" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["validate product added to cart"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["greencart multiitem choose"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1577)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at org.testng.Assert.assertTrue(Assert.java:66)
+at stepdefinitions.Greencartmultiitemchoose.multiple_product_should_added_to_the_cart(Greencartmultiitemchoose.java:135)
+at ✽.multiple product should added to the cart(file:///D:/mywork/cucumber_rahul_greencart/src/test/resources/features/greencartmultiitemchoose.feature:19)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testrunner.Multipleitemtestng@71ba6d4e]" started-at="2023-05-02T12:17:39 IST" name="tearDownClass" finished-at="2023-05-02T12:17:39 IST" duration-ms="378" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

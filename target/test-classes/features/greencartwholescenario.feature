@@ -1,8 +1,5 @@
 Feature: greencart whole page
 
-Background: 
-
-#Given user is on rahulshetty greencart page
 
 @whole1
 Scenario: validate add to cart on greencart page 
@@ -29,7 +26,7 @@ Then place order page should open
 
 And product is added to product table
 
-@whole
+@whole1
 Scenario: validate product page
 
 When user click on place oredr button
@@ -38,8 +35,8 @@ Then proceed page is open
 
 And choose country text is found
 
-#@whole
-#Scenario: validate order should be placed
+@whole1
+Scenario: validate order should be placed
 
 When user click on select country dropdown and select country from dropdown
 
@@ -49,8 +46,8 @@ And click on proceed button
 
 Then order should be placed
 
-#@whole
-#Scenario: validate thank you message is displayed
+@whole1
+Scenario: validate thank you message is displayed
 
 When order is placed
 
