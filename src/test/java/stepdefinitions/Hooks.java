@@ -35,9 +35,9 @@ public void addscreenshot(Scenario scenario) throws WebDriverException, IOExcept
 		String destination=System.getProperty("user.dir")+"\\src\\test\\java\\screenshot\\"+scenario.getName()+".jpeg";
 		FileUtils.copyFile(source, new File(destination));
 		
-		/*File source=((TakesScreenshot)testsetup.basetest.callwebdriver()).getScreenshotAs(OutputType.FILE);
+		File source=((TakesScreenshot)testsetup.basetest.callwebdriver()).getScreenshotAs(OutputType.FILE);
 		byte[] filecontent=FileUtils.readFileToByteArray(source);
-		scenario.attach(filecontent, "image/png", scenario.getName());*/
+		scenario.attach(filecontent, "image/png", scenario.getName());
 	}
 	
 	
