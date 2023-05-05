@@ -11,6 +11,9 @@ public class Constant {
 	public static final String THANKS="placed successfully";
 	
 	
+	//public static final String COUNTRY_CHOOSE="1";
+	//public static final String THANKS="2";
+	
 	
 	
 	}

@@ -70,7 +70,7 @@ public class Allfunctionutility {
 			Iterator<String> multData = multisData.iterator();
 			while (multData.hasNext()) {
 				String product = multData.next();
-				//System.out.println(multData.next());
+				System.out.println(product);
 				compareItemToList.add(product);
 				}
 			}
@@ -82,7 +82,7 @@ public class Allfunctionutility {
 		Iterator<String> multidata = multipleItem.iterator();
 		while (multidata.hasNext()) {
 				String product = multidata.next();
-				//System.out.println(multidata.next());
+				System.out.println(product);
 				compareItemToList.add(product);
 				}
 			

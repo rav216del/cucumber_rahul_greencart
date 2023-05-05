@@ -42,8 +42,8 @@ public class Cartpage {
 		//String[]b;
 		//JavascriptExecutor js= ((JavascriptExecutor)driver);
 		//js.executeScript("");
-		for(int i=1;i<=multiplecartproduct.size();i++) {
-			String item=multiplecartproduct.get(i-1).getText().split("-")[0].trim();
+		for(int i=0;i<multiplecartproduct.size();i++) {
+			String item=multiplecartproduct.get(i).getText().split("-")[0].trim();
 			a.add(item);
 		}
 		return a;

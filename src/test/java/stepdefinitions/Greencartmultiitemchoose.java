@@ -81,10 +81,10 @@ public class Greencartmultiitemchoose {
 			List<String> itemsAdded=testsetup.allfunctionutility.handlingMapDataTable(data);
 			greencartproductpage.getmultipleitem(itemsAdded);
 	}
-	@Then("items present in greencart home page should be increased to {string}")
-	public void items_present_in_greencart_home_page_should_be_increased_to(String item) {
+	@Then("items present in greencart home page should be increased to {int}")
+	public void items_present_in_greencart_home_page_should_be_increased_to(Integer item) {
 		System.out.println(greencartproductpage.getcartcount());
-		if (greencartproductpage.getcartcount().contains(item)){
+		if (greencartproductpage.getcartcount().contains(item.toString())){
 			Assert.assertTrue(true, "total items contain in cart is passed");
 		} else
 			Assert.assertTrue(false, "total items contain in cart is failed");
@@ -126,9 +126,9 @@ public class Greencartmultiitemchoose {
 			// if (multipleitemlist.contains(itemrequired))
 		List<String> compareItem=testsetup.allfunctionutility.handlingValuesDataTable(data);
 		List<String> addedItem = cartpage.getmultiplecartproduct();
-		for(int i=0;i<addedItem.size();i++) {
+		for(int i=0;i<=addedItem.size();i++) {
 			String itempresent=addedItem.get(i);
-			System.out.println(addedItem.get(i));
+			//System.out.println(addedItem.get(i));
 			if (compareItem.contains(itempresent)) {
 				Assert.assertTrue(true);
 			} else
@@ -145,8 +145,7 @@ public class Greencartmultiitemchoose {
 		 * 
 		 * }Assert.assertTrue(true); }
 		 */
-
-
+	
 	@When("user click  on proceed to checkout button")
 	public void user_click_on_proceed_to_checkout_button() {
 		cartpage.getproceedtocheckout();

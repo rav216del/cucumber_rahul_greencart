@@ -6,7 +6,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 		features="src/test/resources/features/greencartmultiitemchoose.feature",
 		glue="stepdefinitions",
-		tags="@whole3",
+		tags="@whole1 or @whole2 or @whole3 or @whole4 or @whole5 or @whole6 or @whole7 or @whole8 or @whole9 ",
 		dryRun=false,
 		monochrome=true,
 		plugin= {"pretty","html:target/cucumber.html",
