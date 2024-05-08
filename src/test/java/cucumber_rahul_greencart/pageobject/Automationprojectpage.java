@@ -16,7 +16,7 @@ public class Automationprojectpage {
 		this.driver=driver;
 		PageFactory.initElements(driver,this);
 	}
-	
+	// new webElements added
 	@CacheLookup
 	@FindBy(xpath="//h5[text()='OUR PROJECTS']")
 	WebElement ourprojecttext;
