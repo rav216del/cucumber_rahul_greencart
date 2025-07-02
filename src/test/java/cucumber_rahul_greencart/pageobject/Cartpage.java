@@ -18,7 +18,8 @@ public class Cartpage {
 		this.driver=driver;
 		PageFactory.initElements(driver,this);
 	}
-	
+
+	// locators
 	@CacheLookup
 	@FindBy(xpath="//div[@class='product-info']//p[@class='product-name']")
 	WebElement cartproduct;
@@ -35,7 +36,8 @@ public class Cartpage {
 	@CacheLookup
 	@FindBy(xpath="//button[text()='PROCEED TO CHECKOUT']")
 	WebElement proceedtocheckout;
-	
+
+	// Methods
 	public List<String> getmultiplecartproduct() {
 		//System.out.println(multiplecartproduct.size());
 		List<String>a= new ArrayList<String>();
